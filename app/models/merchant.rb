@@ -1,4 +1,3 @@
-require 'csv'
 require 'activerecord-import'
 
 class Merchant < ApplicationRecord
