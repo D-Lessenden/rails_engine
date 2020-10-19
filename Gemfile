@@ -50,3 +50,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails'
 gem 'rack-cors'
 gem 'activerecord-import'
+gem 'seed_dump'
+gem 'fast_jsonapi'
