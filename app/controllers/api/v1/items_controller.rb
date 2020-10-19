@@ -17,7 +17,6 @@ class Api::V1::ItemsController < ApplicationController
     #   params[:merchant_id]
     #
     #   }))
-    binding.pry
     a = render json: Item.create(item_params)
 
   end
