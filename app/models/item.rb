@@ -2,6 +2,8 @@ require 'csv'
 require 'activerecord-import'
 
 class Item < ApplicationRecord
+  belongs_to :merchant
+
   def self.import_items
     items = []
     CSV.foreach('db/csv_data/items.csv', headers: true) do |row|
@@ -15,5 +17,3 @@ class Item < ApplicationRecord
     (price.to_i * 0.01).round(2)
   end
 end
-
-# (row["unit_price"].to_i*0.01).round(2)
