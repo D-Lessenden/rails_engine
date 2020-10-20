@@ -9,8 +9,8 @@ class Api::V1::MerchantsController < ApplicationController
 
   def create
     ActiveRecord::Base.connection.reset_pk_sequence!('merchants')
-    Merchant.create(merchant_params)
-    render json: MerchantSerializer.new(Merchant.last)
+    new = Merchant.new(merchant_params)
+    render json: MerchantSerializer.new(new) if new.save
   end
 
   def update
@@ -23,6 +23,6 @@ class Api::V1::MerchantsController < ApplicationController
 
   private
   def merchant_params
-    params.permit(:name)
+    params.permit(:name, :created_at, :updated_at)
   end
 end
