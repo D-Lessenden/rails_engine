@@ -250,8 +250,8 @@
           1,
           1,
           21,
-          23,
-          25,
+          29,
+          37,
           1,
           null,
           null
@@ -261,9 +261,9 @@
         "lines": [
           1,
           1,
-          29,
-          37,
-          42,
+          53,
+          66,
+          66,
           null,
           null
         ]
@@ -476,6 +476,16 @@
           2,
           null,
           null,
+          null,
+          1,
+          4,
+          1,
+          3,
+          1,
+          null,
+          2,
+          null,
+          null,
           null
         ]
       },
@@ -523,7 +533,11 @@
           null,
           null,
           1,
+          2,
           1,
+          null,
+          1,
+          null,
           null,
           null
         ]
@@ -558,6 +572,100 @@
           0,
           null,
           0,
+          null,
+          null
+        ]
+      },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/spec/requests/api/v1/items/multiple_find_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -751,7 +859,27 @@
           null,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           null,
@@ -888,11 +1016,28 @@
           null
         ]
       },
-      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/items/merchants_controller.rb": {
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/items/find_controller.rb": {
         "lines": [
           1,
           1,
+          4,
+          null,
+          null,
           1,
+          4,
+          null,
+          null,
+          1,
+          1,
+          24,
+          null,
+          null,
+          1,
+          16,
+          null,
+          null,
+          1,
+          8,
           null,
           null
         ]
@@ -903,42 +1048,29 @@
           null
         ]
       },
-      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/serializers/merchant_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/items/find_controller.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          null,
-          null,
-          1,
-          1,
-          12,
-          null,
-          null,
-          1,
-          8,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null
-        ]
-      },
       "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/serializers/item_serializer.rb": {
         "lines": [
           1,
           1,
           1,
           null,
+          1,
+          null
+        ]
+      },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/items/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
           1,
           null
         ]
@@ -984,20 +1116,20 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
           1,
-          9,
+          12,
           null,
           null,
           1,
-          6,
+          8,
           null,
           null,
           1,
-          3,
+          4,
           null,
           null
         ]
@@ -1044,6 +1176,6 @@
         ]
       }
     },
-    "timestamp": 1603307031
+    "timestamp": 1603312858
   }
 }
