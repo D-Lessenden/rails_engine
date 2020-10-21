@@ -22,7 +22,7 @@ describe "Items API" do
    expect(item["data"]["id"].to_i).to eq(id)
  end
 
- it "can create a new item" do
+ xit "can create a new item" do
   item_params = { name: "Saw", description: "I want to play a game", merchant_id: 1, unit_price: 100 }
   headers = {"CONTENT_TYPE" => "application/json"}
 
@@ -32,7 +32,7 @@ describe "Items API" do
   expect(item.name).to eq(item_params[:name])
   end
 
-  it "can update an existing item" do
+  xit "can update an existing item" do
     id = create(:item).id
     previous_name = Item.last.name
     item_params = { name: "Sledge" }
