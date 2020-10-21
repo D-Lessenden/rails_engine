@@ -3,6 +3,10 @@ class Api::V1::Items::FindController < ApplicationController
     render json: ItemSerializer.new(Item.single_finder(attribute, value))
   end
 
+  def index
+     render json: ItemSerializer.new(Item.multiple_finder(attribute, value))
+  end
+
   private
   def search_params
     params.permit(:name, :description, :unit_price, :updated_at, :created_at)
