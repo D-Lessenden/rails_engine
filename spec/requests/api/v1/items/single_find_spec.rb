@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'can find a single merchant with a set of criteria' do
+describe 'can find a single item with a set of criteria' do
   it 'can find matches with name' do
     item1 = create(:item, name: "apple")
     item2 = create(:item, name: "banana")
