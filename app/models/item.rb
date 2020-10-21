@@ -23,4 +23,14 @@ class Item < ApplicationRecord
   def self.convert_price(price)
     (price.to_i * 0.01).round(2)
   end
+
+  def self.single_finder(attribute, value)
+    if attribute == 'unit_price'
+      Item.where("to_char(#{attribute}, '000.00') ILIKE ?", "%#{value}%").first
+    elsif attribute == "created_at" || attribute == "updated_at"
+      Item.where("to_char(#{attribute}, 'yyyy-mm-dd hh:mm:ss') ILIKE ?", "%#{value}%").first
+    else
+      Item.where("#{attribute} ILIKE ?", "%#{value}%").first
+    end
+  end
 end
