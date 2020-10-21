@@ -35,6 +35,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'pry'
   gem 'faker'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -44,7 +45,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails'
