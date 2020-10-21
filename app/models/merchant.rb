@@ -1,7 +1,7 @@
 require 'activerecord-import'
 
 class Merchant < ApplicationRecord
-  validates :name, presence: true, length: { allow_blank: false }
+  validates :name, presence: true
 
   has_many :items
   has_many :invoices

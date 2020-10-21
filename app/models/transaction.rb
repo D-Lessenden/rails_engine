@@ -1,6 +1,9 @@
 class Transaction < ApplicationRecord
-  belongs_to :invoice
+  validates :credit_card_number, presence: true
+  validates :result, presence: true
 
+  belongs_to :invoice
+  
   def self.import_transactions
     transactions = []
     CSV.foreach('db/csv_data/transactions.csv', headers: true) do |row|

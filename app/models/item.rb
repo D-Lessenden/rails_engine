@@ -2,14 +2,14 @@ require 'csv'
 require 'activerecord-import'
 
 class Item < ApplicationRecord
-  # validates :name, presence: true, length: { allow_blank: false }
-  # validates :description, presence: true, length: { allow_blank: false }
-  # validates :unit_price, presence: true, numerically: { only_interger: false, greater_than: 0}
-  # validates :name, :description, :unit_price
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :unit_price, presence: true
+
+  # has_many :invoice_items, dependent: :destroy
   belongs_to :merchant
-  has_many :invoice_items, dependent: :destroy
+  has_many :invoice_items
   has_many :invoices, through: :invoice_items
-  has_many :transactions, through: :invoices
 
   def self.import_items
     items = []
