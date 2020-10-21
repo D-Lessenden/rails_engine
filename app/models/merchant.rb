@@ -1,6 +1,11 @@
 require 'activerecord-import'
 
 class Merchant < ApplicationRecord
+  validates :name, presence: true
+
+  has_many :items
+  has_many :invoices
+
   def self.import_merchants
     merchants = []
     CSV.foreach('db/csv_data/merchants.csv', headers: true) do |row|
