@@ -249,9 +249,9 @@
         "lines": [
           1,
           1,
-          7,
-          7,
-          7,
+          15,
+          15,
+          15,
           1,
           null,
           null
@@ -261,9 +261,9 @@
         "lines": [
           1,
           1,
-          13,
-          13,
-          13,
+          19,
+          19,
+          19,
           null,
           null
         ]
@@ -289,12 +289,16 @@
           1,
           1,
           1,
+          1,
+          null,
+          1,
           null,
           null,
           null,
           1,
           1,
           1,
+          null,
           null,
           null,
           null
@@ -601,6 +605,52 @@
           null
         ]
       },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/spec/requests/api/v1/merchants/relationship_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/spec/requests/api/v1/merchants_request_spec.rb": {
         "lines": [
           1,
@@ -721,6 +771,15 @@
           null
         ]
       },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/merchants/items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/merchants_controller.rb": {
         "lines": [
           1,
@@ -762,6 +821,6 @@
         ]
       }
     },
-    "timestamp": 1603239016
+    "timestamp": 1603242989
   }
 }
