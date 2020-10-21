@@ -249,9 +249,9 @@
         "lines": [
           1,
           1,
-          7,
-          7,
-          7,
+          21,
+          21,
+          21,
           1,
           null,
           null
@@ -261,9 +261,9 @@
         "lines": [
           1,
           1,
-          13,
-          13,
-          13,
+          21,
+          21,
+          21,
           null,
           null
         ]
@@ -289,12 +289,19 @@
           1,
           1,
           1,
+          1,
+          null,
+          1,
           null,
           null,
           null,
           1,
           1,
           1,
+          1,
+          null,
+          1,
+          null,
           null,
           null,
           null
@@ -528,6 +535,35 @@
           null
         ]
       },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/spec/requests/api/v1/items/relationship_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/spec/requests/api/v1/items_request_spec.rb": {
         "lines": [
           1,
@@ -597,6 +633,26 @@
           null,
           1,
           2,
+          null,
+          null
+        ]
+      },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/spec/requests/api/v1/merchants/relationship_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -673,6 +729,29 @@
           null
         ]
       },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/items/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/items_controller.rb": {
         "lines": [
           1,
@@ -705,12 +784,6 @@
           null
         ]
       },
-      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/serializers/item_serializer.rb": {
         "lines": [
           1,
@@ -718,6 +791,15 @@
           1,
           null,
           1,
+          null
+        ]
+      },
+      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/controllers/api/v1/merchants/items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -752,16 +834,8 @@
           null,
           null
         ]
-      },
-      "/Users/lessenden/turing/3module/projects/solo_project/rails_engine/app/serializers/merchant_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1603239016
+    "timestamp": 1603248773
   }
 }
