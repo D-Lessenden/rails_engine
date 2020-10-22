@@ -1,9 +1,8 @@
 FactoryBot.define do
   factory :customer do
-    first_name { "MyString" }
-    last_name { "MyString" }
+    first_name { "Customer Dude" }
+    last_name { "Slingenshlippin" }
     created_at { "MyString" }
     updated_at { "MyString" }
-    invoice_id { 1 }
   end
 end
