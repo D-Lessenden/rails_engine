@@ -64,7 +64,6 @@ describe 'Business intelligence endpoints' do
   end
 
   it 'can return the total revenue for a merchant' do
-
     get "/api/v1/merchants/#{@merchant1.id}/revenue"
     total_revenue = JSON.parse(response.body, symbolize_names: true)
     expect(response).to be_successful
