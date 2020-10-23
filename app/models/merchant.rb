@@ -49,27 +49,11 @@ class Merchant < ApplicationRecord
     .limit(quantity)
   end
 
-  # def self.total_revenue(merchant)
-  #   #
-  #   # revenue = Invoice.joins(:invoice_items, :transactions)
-  #   #         .merge(Transaction.successful)
-  #   #         .merge(Invoice.successful)
-  #   #         .where("merchant_id='#{merchant.id}")
-  #   #         .sum('unit_price * quantity')
-  #
-  #   Merchant.joins(invoices: [:transactions, :invoice_items])
-  #   .select("merchants.*, SUM(invoice_items.quantity * invoice_items.unit_price) AS revenue")
-  #   .where("merchant_id='#{merchant.id}' AND invoices.status='shipped' AND transactions.result='success'")
-  #   .group("merchants.id")
-  #
-  #   # .select("merchants.#{merchant.id}, sum(invoice_items.quantity * invoice_items.unit_price) as revenue")
-  #   # Merchant.joins(invoices: [:invoice_items, :transactions]).sum("")
-  #
-  #   # merchant_revenue = Invoice.joins(:invoice_items, :transactions)
-  #   #   .merge(Transaction.unscoped.successful)
-  #   #   .merge(Invoice.unscoped.successful)
-  #   #   .where(merchant_id: merchant.id)
-  #   #   .sum('unit_price * quantity')
-  #   # Revenue.new(merchant_revenue)
-  # end
+  def self.total_revenue(merchant)
+    revenue = Merchant.joins(invoices: [:transactions, :invoice_items])
+    .select("merchants.*, SUM(invoice_items.quantity * invoice_items.unit_price) AS revenue")
+    .where("merchant_id='#{merchant.id}' AND invoices.status='shipped' AND transactions.result='success'")
+    .group("merchants.id")
+    Revenue.new(revenue)
+  end
 end
