@@ -5,7 +5,4 @@ class InvoiceItem < ApplicationRecord
   belongs_to :item
   belongs_to :invoice
 
-  def self.convert_price(price)
-    (price.to_i * 0.01).round(2)
-  end
 end

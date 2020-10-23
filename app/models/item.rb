@@ -10,10 +10,6 @@ class Item < ApplicationRecord
   has_many :invoice_items
   has_many :invoices, through: :invoice_items
 
-  def self.convert_price(price)
-    (price.to_i * 0.01).round(2)
-  end
-
   def self.single_finder(attribute, value)
     if attribute == 'unit_price'
       Item.where("to_char(#{attribute}, '000.00') ILIKE ?", "%#{value}%").first
