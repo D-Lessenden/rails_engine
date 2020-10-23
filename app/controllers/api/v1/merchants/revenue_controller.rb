@@ -14,6 +14,6 @@ class Api::V1::Merchants::RevenueController < ApplicationController
 
   private
   def quantity
-    params[:quantity].to_i
+    params[:quantity]
   end
 end
