@@ -9,6 +9,9 @@ class Invoice < ApplicationRecord
    has_many :invoice_items
    has_many :items, through: :invoice_items
 
+  scope :successful, -> { where(status: "shipped") }
+  #can change to shipped
+
   def self.import_invoices
     invoices = []
     CSV.foreach('db/csv_data/invoices.csv', headers: true) do |row|
