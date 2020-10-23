@@ -6,6 +6,10 @@ Rails.application.routes.draw do
        get '/:merchant_id/items', to: 'items#index'
        get '/find', to: 'find#show'
        get '/find_all', to: 'find#index'
+       get '/most_revenue', to: 'revenue#most_revenue'
+       get '/most_items', to: 'revenue#most_items'
+       get '/:id/revenue', to: 'revenue#total_revenue'
+
      end
      resources :merchants, only: [:index, :show, :create, :update, :destroy]
     end
@@ -21,5 +25,11 @@ Rails.application.routes.draw do
      resources :items, only: [:index, :show, :create, :update, :destroy]
     end
   end
+
+  namespace :api do
+   namespace :v1 do
+     get '/revenue', to: 'revenue#index'
+   end
+ end
 
 end
