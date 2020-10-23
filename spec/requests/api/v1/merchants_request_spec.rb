@@ -21,28 +21,28 @@ describe "Merchants API" do
    expect(merchant["data"]["id"].to_i).to eq(id)
  end
 
- xit "can create a new merchant" do
-  merchant_params = { name: "Merchant Name", created_at: "2013-03-03 12:12:12", updated_at: "2018-04-29 12:12:12" }
-  headers = {"CONTENT_TYPE" => "application/json"}
+ it "can create a new merchant" do
 
-  post "/api/v1/merchants", headers: headers, params: JSON.generate({merchant: merchant_params})
+
+  merchant_params = {name: 'some name'}
+  headers = { 'CONTENT_TYPE' => 'application/json' }
+  post '/api/v1/merchants', headers: headers, params: JSON.generate(merchant_params)
   merchant = Merchant.last
+
   expect(response).to be_successful
   expect(merchant.name).to eq(merchant_params[:name])
-  end
+end
 
-  xit "can update an existing merchant" do
-    id = create(:merchant).id
-    previous_name = Merchant.last.name
-    merchant_params = { name: "Some other name" }
-    headers = {"CONTENT_TYPE" => "application/json"}
+  it "can update an existing merchant" do
+    merchant = create(:merchant)
 
-    put "/api/v1/merchants/#{id}", headers: headers, params: JSON.generate({merchant: merchant_params})
-    merchant = Merchant.find_by(id: id)
-
+    merchant_params = { name: 'some other name' }
+    headers = { 'CONTENT_TYPE' => 'application/json' }
+    patch "/api/v1/merchants/#{merchant.id}", headers: headers, params: JSON.generate(merchant_params)
+    updated_merchant = Merchant.find_by(id: merchant.id)
     expect(response).to be_successful
-    expect(merchant.name).to_not eq(previous_name)
-    expect(merchant.name).to eq("Some other name")
+    expect(updated_merchant.name).to_not eq(merchant.name)
+    expect(updated_merchant.name).to eq('some other name')
   end
 
   it "can destroy an merchant" do
