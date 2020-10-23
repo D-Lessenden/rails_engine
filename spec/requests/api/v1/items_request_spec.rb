@@ -22,28 +22,44 @@ describe "Items API" do
    expect(item["data"]["id"].to_i).to eq(id)
  end
 
- xit "can create a new item" do
-  item_params = { name: "Saw", description: "I want to play a game", merchant_id: 1, unit_price: 100 }
-  headers = {"CONTENT_TYPE" => "application/json"}
+ it "can create a new item" do
+   merchant = create(:merchant)
+   item_params = {
+     name: 'Saw',
+     description: 'Do you want to play a game?',
+     unit_price: 100,
+     merchant_id: merchant.id,
+   }
 
-  post "/api/v1/items", headers: headers, params: JSON.generate({item: item_params})
-  item = Item.last
-  expect(response).to be_successful
-  expect(item.name).to eq(item_params[:name])
+   headers = { 'CONTENT_TYPE' => 'application/json' }
+   post '/api/v1/items', headers: headers, params: JSON.generate(item_params)
+   item = Item.last
+   expect(response).to be_successful
+   expect(item.name).to eq(item_params[:name])
+   expect(item.description).to eq(item_params[:description])
+   expect(item.unit_price).to eq(item_params[:unit_price])
+   expect(item.merchant_id).to eq(item_params[:merchant_id])
   end
 
-  xit "can update an existing item" do
-    id = create(:item).id
+  it "can update an existing item" do
+    merchant = create(:merchant)
+    item = merchant.items.create({
+      name: 'Saw',
+      description: 'Do you want to play a game?',
+      unit_price: 100,
+      merchant_id: merchant.id,
+    })
     previous_name = Item.last.name
+
     item_params = { name: "Sledge" }
     headers = {"CONTENT_TYPE" => "application/json"}
 
-    put "/api/v1/items/#{id}", headers: headers, params: JSON.generate({item: item_params})
-    item = Item.find_by(id: id)
+    put "/api/v1/items/#{item.id}", headers: headers, params: JSON.generate(item_params)
+    updated_item = Item.find_by(id: item.id)
 
     expect(response).to be_successful
-    expect(item.name).to_not eq(previous_name)
-    expect(item.name).to eq("Sledge")
+    expect(updated_item.name).to_not eq(previous_name)
+    expect(updated_item.name).to eq("Sledge")
   end
 
   it "can destroy an item" do
