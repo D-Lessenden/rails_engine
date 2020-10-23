@@ -63,13 +63,11 @@ describe 'Business intelligence endpoints' do
     expect(most_items[:data].first[:attributes][:name]).to eq(@merchant1.name)
   end
 
-  xit 'can return the total revenue for a merchant' do
+  it 'can return the total revenue for a merchant' do
 
     get "/api/v1/merchants/#{@merchant1.id}/revenue"
     total_revenue = JSON.parse(response.body, symbolize_names: true)
-     binding.pry
     expect(response).to be_successful
-    #how do I test this amount ?
-    #from a pry in the controller I can run this Merchant.total_revenue(merchant).first.revenue
+    expect(total_revenue[:data][:attributes][:revenue].first[:revenue]).to eq(31.5)
   end
 end
