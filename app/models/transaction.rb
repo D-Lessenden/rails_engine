@@ -6,11 +6,4 @@ class Transaction < ApplicationRecord
 
   scope :successful, -> { where(result: "success") }
 
-  def self.import_transactions
-    transactions = []
-    CSV.foreach('db/csv_data/transactions.csv', headers: true) do |row|
-      transactions << row.to_h
-    end
-    Transaction.import(transactions)
-  end
 end
