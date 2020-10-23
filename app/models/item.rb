@@ -6,11 +6,9 @@ class Item < ApplicationRecord
   validates :description, presence: true
   validates :unit_price, presence: true
 
-  # has_many :invoice_items, dependent: :destroy
   belongs_to :merchant
   has_many :invoice_items
   has_many :invoices, through: :invoice_items
-  has_many :transactions, through: :invoices
 
   def self.import_items
     items = []
