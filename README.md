@@ -83,17 +83,16 @@ Then, begin your query to the API by using the following root URI on all queries
 And append whatever request to the end that you desire. A non-exhaustive list of various endpoints that can be queried with a GET request are as follows:
 
 merchants
-items
-items/:id
-items/find?name=
-merchants/find_all?created_at=2012-03-27 14:53:59 UTC
-merchants/most_revenue?quantity=x where x is the number of merchants that should be returned
-merchants/most_items?quantity=x where x is the number of merchants that should be returned
-Reference Sources
-Here I am listing some links to articles and documentation I used to work on this project
 
-Gems
-Rubygems.org
-Faker
-FactoryBot Docs
-Jsonapi-serializer
+items
+
+items/:id
+
+items/find?name=
+
+merchants/find_all?created_at=2012-03-27 14:53:59 UTC
+
+merchants/most_revenue?quantity=x where x is the number of merchants that should be returned
+
+merchants/most_items?quantity=x where x is the number of merchants that should be returned
+
